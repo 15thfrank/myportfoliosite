@@ -382,10 +382,6 @@ body .shape.shape-3 {
     #services .ud-about-image {
         display: none;
     }
-    .rowReverse {
-        display: flex;
-        flex-direction: column-reverse;
-    }
     .rowStandard {
         display: flex;
         flex-direction: column;
@@ -549,67 +545,6 @@ footer {
     text-decoration: wavy;
 }
 
-.portfolioitem {
-    position: relative;
-    display: flex;
-    padding: 0 0.5rem;
-    margin-top: 1rem;
-}
-
-.itemImg {
-    position: relative;
-    width: 100%;
-}
-
-/* .itemImg img {
-    width: 100%;
-} */
-
-.itemDetails {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 80%;
-    overflow: hidden;
-    bottom: 0;
-    padding: 1rem;
-    border-radius: 0rem 1rem 0 0;
-    top: 80%;
-    transition: all .5s linear;
-}
-
-.portfolioitem:hover .itemDetails {
-    top: 0;
-    width: calc(100% - 1rem);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0;
-    justify-content: center;
-}
-
-.portfolioitem .itemImg img {
-    transition: all 0.5s;
-}
-
-.portfolioitem:hover .itemImg img {
-    filter: grayscale(1);
-}
-
-.itemDetails h4 {
-    font-size: 1rem;
-}
-
-.itemDetails p {
-    font-size: 0.9rem;
-}
-
-.itemDetails p span {
-    font-size: 0.7rem;
-    background: #ffd700 ;
-    margin: 0 5px 5px 0;
-    padding: 0 5px;
-    color:#000;
-}
 
 #contact {
     padding: 7.5rem 0;
@@ -653,6 +588,10 @@ h3 {
     #about ul {
         grid-template-columns: repeat(2, 1fr);
     }
+    .rowReverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 .navbar-collapse.show {background: rgba(33, 43, 45, 0.95)}
 
@@ -668,4 +607,26 @@ h3 {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+.portfolioItem {
+    padding: 1rem 2rem;
+    margin: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.portfolioItem .itemImg img {
+    border-radius: 2rem;
+    margin: 1rem 0;
+}
+
+.itemDetails p span {
+    font-size: 0.7rem;
+    background: #ffd700 ;
+    margin: 0 5px 5px 0;
+    padding: 0 5px;
+    color:#000;
 }
